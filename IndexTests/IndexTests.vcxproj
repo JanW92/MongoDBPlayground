@@ -91,10 +91,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SimulationPlatform\Third_Party_Libraries\MongoDb\mongo-cxx-r3.6.6\x64\Debug\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>bsoncxx.lib;mongocxx.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -106,10 +110,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\SimulationPlatform\Third_Party_Libraries\MongoDb\mongo-cxx-r3.6.6\x64\Debug\include;C:\SimulationPlatform\Third_Party_Libraries\MongoDb\mongo-c-1.21.0\x64\Debug\include;C:\SimulationPlatform\Third_Party_Libraries\MongoDb\boost-1.72.0\;C:\SimulationPlatform\Third_Party_Libraries\rapidjson\include;C:\SimulationPlatform\Third_Party_Libraries\FTP\ftpclient-cpp\FTP;C:\SimulationPlatform\Third_Party_Libraries\FTP\build-libcurl-windows\third-party\libcurl\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SimulationPlatform\Third_Party_Libraries\MongoDb\mongo-cxx-r3.6.6\x64\Debug\lib;C:\SimulationPlatform\Third_Party_Libraries\MongoDb\mongo-c-1.21.0\x64\Debug\lib;C:\SimulationPlatform\Third_Party_Libraries\FTP\build-libcurl-windows\third-party\libcurl\lib\dll-debug-x64;C:\SimulationPlatform\Third_Party_Libraries\FTP\ftpclient-cpp\Build\lib\Debug;C:\SimulationPlatform\Third_Party_Libraries\zlib\zlib-1.2.11\x64\Debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mongocxx.lib;bsoncxx.lib;mongoc-1.0.lib;bson-1.0.lib;zlibd.lib;libcurl_debug.lib;ftpclient.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
